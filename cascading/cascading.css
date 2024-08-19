@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+p {
+  color: yellow !important;
+}
+
+body #color {
+  color: green;
+}
+
+/* 나중에 선언된 스타일이 우선 적용된다. */
+body #color {
+  color: red;
+}
+

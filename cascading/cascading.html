@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스타일 우선순위</title>
+    <!-- 만약에 마음에 안드는 부분이 있더라도, css 파일은 맘대로 변경하면 안됨. 왜냐? 누가 어디서 사용할지 모르니깐 -->
+    <!-- 색을 바꾸고 싶다면 우선순위를 이용하기!! -->
+    <!-- css 파일을 따로 만든 다음에 적용하는 것도 가능 -->
+    <link rel="stylesheet" href="cascading.css" />
+  </head>
+  <body>
+    <!-- 원래라면 yellow가 더 우선순위를 가지지만, !important로 인해 blue가 더 우선순위를 가지게 된다. -->
+    <p style="color: green">인라인 스타일보다, !important가 우선순위가 더 높아서 초록색으로 나온다.</p>
+    <div id="color">원래는 초록색이지만, 마지막에 빨간색으로 선언했기 때문에 빨간색이 적용된다.</div>
+  </body>
+</html>
