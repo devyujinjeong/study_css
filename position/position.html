@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+    <style>
+      #wrap {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        border: 2px dotted blue;
+        margin: 0 auto;
+        /* text-align은 자동으로 상속되는 속성*/
+        text-align: right;
+      }
+
+      /* 첫번째 요소인 토끼와 거북이 */
+      #wrap div:first-child {
+        /* 만약에 position을 absolute만 사용했을 경우에는 브라우저를 기준으로 설정되게 됨.
+        그래서 내가 원하는 것을 기준으로 하고 싶으면, 원하는 것에서 position을 relative를 줘야 함.
+        position의 default는 static*/
+        position: absolute;
+        right: 0px;
+        width: 200px;
+        height: 200px;
+        border: 2px dashed green;
+        margin-right: 20px;
+        /* text-align은 블록 요소 안에 있는 인라인 요소에만 적용됨 */
+        text-align: center;
+      }
+
+      /* 마지막 요소인 심청전 */
+      #wrap div:last-child {
+        position: absolute;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div>토끼와 거북이</div>
+      <div>심청전</div>
+    </div>
+  </body>
+</html>

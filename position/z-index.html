@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>z-index</title>
+    <style>
+      .dessert {
+        width: 300px;
+        height: 100px;
+        font-size: 3.5em;
+        font-weight: bold;
+        text-align: center;
+        line-height: 100px;
+        position: absolute;
+      }
+
+      div.dessert:nth-child(1) {
+        background-color: brown;
+        color: white;
+        /* 마시멜로우 표시가 코코아에 가려지게 됨. 코코아의 z-index가 더 크기 때문 */
+        z-index: 2; 
+        left: 50px; 
+      }
+      div.dessert:nth-child(2) {
+        background-color: pink;
+        color: white;
+        z-index: 1;
+        left: 300px; 
+      }
+      div.dessert:nth-child(3) {
+        background-color: ivory;
+        color: black;
+        left: 550px; 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dessert">코코아</div>
+    <div class="dessert">마시멜로우</div>
+    <div class="dessert">우유</div>
+  </body>
+</html>
