@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>바깥여백</title>
+    <style>
+      /* 여기에서 div1에서 밑의 여백이 20이고 div2에서 top 여백이 50이라 둘 사이의 여백은 두 수를 더한
+        70이라고 생각할 수 있지만, 사실 여백은 50이다. 바깥 여백은 더 크게 준 것으로 겹쳐지게 된다.
+        그래서 보통 위아래의 간격을 조정할 때는 margin을 사용하지 않는다. */
+      #div1 {
+        width: 300px;
+        height: 100px;
+        border: 2px solid orange;
+        margin-bottom: 20px;
+      }
+
+      #div2 {
+        width: 300px;
+        height: 100px;
+        border: 2px solid pink;
+        margin-top: 50px;
+      }
+
+      #div3 {
+        width: 300px;
+        height: 100px;
+        border: 2px solid grey;
+        /*margin: 10px;*/ /* 우 아래 좌 우 다 들어감 */
+        /*margin: 10px 40px;*/ /* 위,아래 / 좌,우 */
+        /*margin: 10px 40px 20px;*/ /* 위 좌우 아래 */
+        /*margin: 10px 20px 30px 40px;*/ /* 위 우 아래 좌 (시계 방향) */
+        margin: 0 auto; /* 좌우는 자동으로 맞추어 가운데 배치 */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">DIV1</div>
+    <div id="div2">DIV2</div>
+    <div id="div3">DIV3</div>
+  </body>
+</html>
